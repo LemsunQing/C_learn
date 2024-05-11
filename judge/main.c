@@ -8,11 +8,11 @@ int main(void)
 	bool is_smart_student = false;
 	if (is_technician|is_smart_student)
 	{
-		printf("you have a good furture");
+		printf("you have a good furture\n");
 	}
 	else
 	{
-		printf("you should take a work");
+		printf("you should take a work\n");
 	}
 	printf("Hello,World!\n");
 	return 0;
