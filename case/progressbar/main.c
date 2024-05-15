@@ -21,7 +21,7 @@ int main()
 		{
 			printf(" ");
 		}
-		printf("]%d%%\n",index * 100 /TOTAL_STEPS);
+		printf("]%d%%",index * 100 /TOTAL_STEPS);
 		fflush(stdout);//确保进度条及时显示
 		usleep(100000);
 	}
