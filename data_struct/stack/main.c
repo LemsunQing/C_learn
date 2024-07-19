@@ -23,7 +23,7 @@ void InitStack(UrlStack *tstack)
 	tstack->top = -1;
 }
 
-//出栈
+//入栈
 void push(UrlStack *stack,char *p)
 {
 	if(stack->top >= MAX_STACK_SIZE - 1)
@@ -59,11 +59,30 @@ UrlStack stack;
 
 int main(void)
 {
+	int WorkCode = 0;
+	char *str;
 	InitStack(&stack);
-	push(&stack,"bing.com");
-	push(&stack,"goole.com");
-	pop(&stack);
-	pop(&stack);
-	pop(&stack);
+	while(1)
+	{
+		printf("==>入栈 :1\n");
+		printf("==>出栈 :2\n");
+		scanf("%d",&WorkCode);
+		switch (WorkCode)
+		{
+			case 1:
+				printf("输入入栈信息\n");
+				scanf("%s",str);
+				//入栈操作
+				push(&stack,str);
+				break;
+			case 2:
+				printf("消息出栈\n");
+				pop(&stack);
+
+				break;
+
+		}
+
+	}
 	return 0;
 }
